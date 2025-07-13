@@ -5,17 +5,6 @@ import type { Event } from '@/types'
 defineProps<{
   event: Event
 }>()
-// const event = ref({
-//   id: 5928101,
-//   category: 'animal welfare',
-//   title: 'Cat Adoption Day',
-//   description: 'Find your new faline friend at this event.',
-//   location: 'Mewo Town',
-//   date: 'January 28, 2022',
-//   time: '12:00',
-//   petAllowed: true,
-//   organizer: 'Kat Laydee'
-// })
 </script>
 
 <template>
@@ -30,6 +19,8 @@ defineProps<{
       </div>
     </div>
   </div>
+  <img src="https://firebasestorage.googleapis.com/v0/b/publicimage-41deb.appspot.com/o/tu.jpg?alt=media&token=171d65d0-8e8d-45d2-81db-021836316e02" />
+
 </template>
 
 <style scoped>
