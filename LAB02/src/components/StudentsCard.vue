@@ -15,7 +15,7 @@ defineProps<{
         <strong>GPA:</strong> 
         {{ student.gpa }}</span> 
       <br>
-      <img :src="student.image" alt="Student-image" class="student-img">
+      <img :src="student.image" class="student-img">
       <br>
       <span>Pen Amount: {{ student.penAmount }}</span>
       <br>

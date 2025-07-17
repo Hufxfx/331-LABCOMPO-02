@@ -19,8 +19,6 @@ defineProps<{
       </div>
     </div>
   </div>
-  <img src="https://firebasestorage.googleapis.com/v0/b/publicimage-41deb.appspot.com/o/tu.jpg?alt=media&token=171d65d0-8e8d-45d2-81db-021836316e02" />
-
 </template>
 
 <style scoped>
