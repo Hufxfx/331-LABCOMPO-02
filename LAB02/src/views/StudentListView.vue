@@ -9,7 +9,6 @@ const students = ref<Student[]>([])
 onMounted(() => {
   StudentsService.getEvents()
     .then((response) => {
-        
       students.value = response.data
     })
     .catch((error) => {
