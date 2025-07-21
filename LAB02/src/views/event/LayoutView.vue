@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import {ref, onMounted, defineProps} from 'vue'
-import Event from '@/types/Event'
+import { type Event} from '@/types'
 import EventService from '@/services/EventService'
 
-const event = ref<Event>(null)
+const event = ref<Event | null>(null)
 const props = defineProps({
     id: {
         type: String,
@@ -11,7 +11,7 @@ const props = defineProps({
     }
 })
 onMounted (() => {
-    EventService.getEvent(Number(props.id))
+    EventService.getEvent(parseInt(props.id))
     .then((response) => {
         event.value = response.data
     })
@@ -24,7 +24,13 @@ onMounted (() => {
 <template>
     <div v-if="event">
         <h1>{{ event.title }}</h1>
-        <p>{{ event.time }} on {{ event.date }} @{{ event.location }}</p>
-        <p>{{ event.description }}</p>
-    </div>
+        <nav>
+            <RouterView :to="{name: 'event-detail-view'}">Details</RouterView>
+            |
+            <RouterView :to="{ name: 'event-register-view'}">Register</RouterView>
+            |
+            <RouterView :to="{ name: 'event-edit-view'}">Edit</RouterView>
+        </nav>
+        <RouterView :event="event" />
+    </div> 
 </template>
