@@ -45,6 +45,14 @@ onMounted(() => {
 <template>
   
   <h1>Events for Good</h1>
+
+  <div>
+    <label>Page size: </label>
+    <RouterLink :to="{ name: 'event-list-view', query: { page: 1, size: 2 } }">2</RouterLink> |
+    <RouterLink :to="{ name: 'event-list-view', query: { page: 1, size: 5 } }">5</RouterLink> |
+    <RouterLink :to="{ name: 'event-list-view', query: { page: 1, size: 10 } }">10</RouterLink>
+  </div>
+  <br>
   <!-- new element -->
   <div class="events">
     <EventCard v-for="event in events" :key="event.id" :event="event" />
