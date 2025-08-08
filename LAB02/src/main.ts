@@ -14,6 +14,9 @@ const app = createApp(App)
 import { inject } from '@vercel/analytics'
 inject()
 
+import { injectSpeedInsights } from '@vercel/speed-insights'
+injectSpeedInsights()
+
 app.use(createPinia())
 app.use(router)
 
