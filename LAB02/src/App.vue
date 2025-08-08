@@ -10,7 +10,7 @@ const { message } = storeToRefs(messageStore);
 </script>
 
 <template>
-  <SpeedInsights />
+  <!-- <SpeedInsights /> -->
   <div class="text-center font-sans text-gray-700 antialias">
     <header>
       <div  class="animate-fade" v-if="message">
