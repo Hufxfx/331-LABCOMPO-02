@@ -25,25 +25,3 @@ defineProps<{
     </div>
   </div>
 </template>
-
-<style scoped>
-.students-card {
-  padding: 20px;
-  width: 250px;
-  cursor: pointer;
-  border: 1px solid #39495c;
-  margin-bottom: 18px;
-}
-.students-card:hover {
-  transform: scale(1.01);
-  box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2);
-}
-.student-img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin: 10px 0 10px 0;
-}
-
-</style>
